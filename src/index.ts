@@ -11,7 +11,7 @@ if (!apiKey) {
 
 const server = new McpServer({
   name: "truelist",
-  version: "0.1.0",
+  version: "0.1.1",
 });
 
 const client = new Truelist(apiKey);

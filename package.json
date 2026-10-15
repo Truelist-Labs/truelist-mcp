@@ -1,12 +1,13 @@
 {
   "name": "truelist-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "mcpName": "io.truelist/mcp",
   "description": "MCP server for Truelist email validation — use with Claude, Cursor, and VS Code",
   "author": "Truelist <support@truelist.io>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Truelist-io-Email-Validation/truelist-mcp.git"
+    "url": "https://github.com/Truelist-Labs/truelist-mcp.git"
   },
   "homepage": "https://truelist.io",
   "keywords": [
