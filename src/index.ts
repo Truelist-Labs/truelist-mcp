@@ -1,6 +1,7 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import Truelist from "truelist";
+import { EmailFinderClient } from "./emailFinder.js";
 import { registerTools } from "./tools.js";
 
 const apiKey = process.env.TRUELIST_API_KEY;
@@ -11,12 +12,13 @@ if (!apiKey) {
 
 const server = new McpServer({
   name: "truelist",
-  version: "0.1.1",
+  version: "0.2.0",
 });
 
 const client = new Truelist(apiKey);
+const finder = new EmailFinderClient(apiKey);
 
-registerTools(server, client);
+registerTools(server, client, finder);
 
 const transport = new StdioServerTransport();
 await server.connect(transport);

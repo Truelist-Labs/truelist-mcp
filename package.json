@@ -1,8 +1,8 @@
 {
   "name": "truelist-mcp",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "mcpName": "io.truelist/mcp",
-  "description": "MCP server for Truelist email validation — use with Claude, Cursor, and VS Code",
+  "description": "MCP server for Truelist email finding and validation — use with Claude, Cursor, and VS Code",
   "author": "Truelist <support@truelist.io>",
   "license": "MIT",
   "repository": {
@@ -16,6 +16,7 @@
     "email",
     "email-validation",
     "email-verification",
+    "email-finder",
     "truelist",
     "claude",
     "cursor",
@@ -34,8 +35,9 @@
   },
   "scripts": {
     "build": "tsup",
-    "lint": "eslint src/",
-    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/ test/",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p tsconfig.test.json",
+    "test": "tsc -p tsconfig.test.json && node --test dist-test/test/emailFinder.test.js dist-test/test/tools.test.js",
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
