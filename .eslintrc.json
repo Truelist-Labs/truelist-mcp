@@ -16,5 +16,5 @@
       { "argsIgnorePattern": "^_" }
     ]
   },
-  "ignorePatterns": ["dist/", "node_modules/"]
+  "ignorePatterns": ["dist/", "dist-test/", "node_modules/"]
 }

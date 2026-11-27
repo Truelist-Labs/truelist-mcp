@@ -2,13 +2,13 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.truelist/mcp",
   "title": "Truelist",
-  "description": "Validate email addresses for deliverability and manage email validation batches with Truelist.",
+  "description": "Find work emails and validate addresses for deliverability with Truelist.",
   "websiteUrl": "https://truelist.io",
   "repository": {
     "url": "https://github.com/Truelist-Labs/truelist-mcp",
     "source": "github"
   },
-  "version": "0.1.1",
+  "version": "0.2.0",
   "remotes": [
     {
       "type": "streamable-http",
@@ -19,7 +19,7 @@
     {
       "registryType": "npm",
       "identifier": "truelist-mcp",
-      "version": "0.1.1",
+      "version": "0.2.0",
       "transport": {
         "type": "stdio"
       },
